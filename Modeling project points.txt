@@ -1,0 +1,22 @@
+Validating Part 1:
+
+1. For REACH horizontal plane movement, use Modeling_Part1 file.
+2. Run using CopelliaSimEdu.
+3. Run the simulation and note the parameter for Gripper_Actuator (revolute joint), it says 0.17. That is the higher boundary limit for the gripper, lower being zero. 
+4. Correspondingly, note down the values for wrist joint, elbow joint and shoulder joint. Here, D1=D+0.17
+5. Verify with the values displayed in MATLAB for the same. 
+6. Tabulating the same here and comparing: 	
+	
+	Joint		Value in MATLAB			Value in CopelliaSim
+	Shoulder	-22.7326			-22.74	
+	Elbow		75.6285				75.64
+	Wrist		-52.8959			-52.90
+
+7. Now, rerun the simulation and try to pause the video at a random value of displacement for gripper actuation, before simulation ends.
+8. For this point, let us try to change the corresponding D1 value in MATLAB, as obtained in our recording. Here, D1 = D+0.0846.
+9. Now, obtaining the calculated values from MATLAB for joint angles and comparing with the obtained values from simulation.
+
+	Joint		Value in MATLAB			Value in CopelliaSim
+	Shoulder	-4.8099				-4.81
+	Elbow		25.0229				25.04
+	Wrist		-20.21				-20.23
